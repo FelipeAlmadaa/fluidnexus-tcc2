@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "Ao utilizar este projeto, cite o autor indicado abaixo."
+title: "FluidNexus TCC 2"
+type: software
+authors:
+  - family-names: "Almada"
+    given-names: "Felipe Augusto Sousa de"
+repository-code: "https://github.com/FelipeAlmadaa/fluidnexus-tcc2"
+

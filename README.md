@@ -2,6 +2,12 @@
 
 Repositório do Trabalho de Conclusão de Curso 2 de Felipe Augusto Sousa de Almada.
 
+## Autoria
+
+**Autor:** Felipe Augusto Sousa de Almada
+
+Este projeto acadêmico possui apenas o autor identificado acima.
+
 O projeto investiga a reconstrução tridimensional e a evolução temporal de fluidos a partir dos conjuntos de dados utilizados pelo FluidNexus. Os experimentos considerarão FluidNexus-Smoke, FluidNexus-Ball e ScalarReal/ScalarFlow, com resultados visuais por frame e avaliação quantitativa.
 
 ## Estrutura inicial
