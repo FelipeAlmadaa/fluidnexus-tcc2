@@ -18,8 +18,11 @@ O projeto investiga a reconstrução tridimensional e a evolução temporal de f
 - `results/`: tabelas, figuras e resultados dos experimentos.
 - `src/`: código-fonte do pipeline de reconstrução e avaliação.
 
+## Desenvolvimento
+
+O roteiro de implementação, os entregáveis e os critérios de conclusão estão descritos em [`docs/PLANO_DE_DESENVOLVIMENTO.md`](docs/PLANO_DE_DESENVOLVIMENTO.md).
+
 ## Dataset principal
 
 - FluidNexus: https://yuegao.me/FluidNexus/
 - Arquivos: https://huggingface.co/datasets/yuegao/FluidNexusDatasets
-
