@@ -49,6 +49,10 @@ Cada animação mostra a foto real da câmera de teste, a reconstrução renderi
 
 ![ScalarReal leve](results/gifs/scalarreal_reconstrucao_3d_leve.gif)
 
+**Alta**
+
+![ScalarReal alta](results/gifs/scalarreal_reconstrucao_3d_alta.gif)
+
 #### FluidNexus-Smoke
 
 **Leve**
