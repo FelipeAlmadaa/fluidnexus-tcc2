@@ -39,6 +39,22 @@ Os dados e modelos treinados ficam no Google Drive e não são versionados.
 
 ## Resultados
 
+### Reconstrução 3D em movimento
+
+Cada animação mostra a foto real da câmera de teste, a reconstrução renderizada e a nuvem de partículas 3D girando ao longo dos frames 20 a 160.
+
+**FluidNexus-Smoke (versão alta)**
+
+![Smoke](results/gifs/smoke_reconstrucao_3d_alta.gif)
+
+**FluidNexus-Ball (versão alta)**
+
+![Ball](results/gifs/ball_reconstrucao_3d_alta.gif)
+
+**ScalarReal (versão leve)**
+
+![ScalarReal](results/gifs/scalarreal_reconstrucao_3d_leve.gif)
+
 ### Reconstrução: leve x alta
 
 ![Smoke leve x alta](results/figuras/smoke_leve_x_alta.jpg)
@@ -61,6 +77,7 @@ A versão alta melhora o Smoke em todas as métricas (+1,36 dB de PSNR, +0,05 de
 - `src/tcc_seg.py`: segmentação 3D (dados, modelos, treino, métricas e figuras).
 - `results/tabelas/`: Tabelas 1, 2 e 3 (CSV).
 - `results/figuras/`: figuras do trabalho.
+- `results/gifs/`: animações da reconstrução 3D.
 - `configs/`, `data/`: configurações e dados locais (não versionados).
 - `docs/`: documentação do TCC.
 
@@ -69,6 +86,8 @@ A versão alta melhora o Smoke em todas as métricas (+1,36 dB de PSNR, +0,05 de
 1. Abra `notebooks/tcc2_pipeline.ipynb` no Google Colab com GPU (L4 ou T4).
 2. Rode as células na ordem. Os dados são salvos em `MyDrive/TCC2_FluidNexus`.
 3. A reconstrução usa o código oficial do FluidNexus, compilado no próprio Colab (seção 2 do notebook).
+
+O passo a passo de cada etapa, com entradas, saídas e critério de conclusão, está em [`docs/PLANO_DE_DESENVOLVIMENTO.md`](docs/PLANO_DE_DESENVOLVIMENTO.md).
 
 ## Desenvolvimento
 

@@ -48,4 +48,4 @@ runs/
 *.npy
 *.tar
 *.mp4
-*.gif
+videos/*.gif

@@ -42,14 +42,14 @@ Todas as etapas leem e gravam em `MyDrive/TCC2_FluidNexus/`:
 ### Etapa 2. Ambiente do FluidNexus
 
 - **Notebook:** seção 2.
-- **Ações:** criar o ambiente Python 3.12, instalar PyTorch e as dependências, compilar as extensões CUDA para a GPU detectada.
+- **Ações:** clonar o código oficial (seção 1), criar o ambiente Python 3.12, instalar PyTorch e as dependências, compilar as extensões CUDA para a GPU detectada e aplicar a correção de compatibilidade do campo `bbox_model`.
 - **Saída:** ambiente em `/content/fluidnexus_py312`.
 - **Concluído quando:** o FluidNexus importa sem erro e as extensões CUDA carregam.
 - **Atenção:** o ambiente fica no disco local do Colab. Rode esta etapa de novo sempre que abrir uma sessão nova.
 
 ### Etapa 3. Reconstrução 3D (leve e alta)
 
-- **Notebook:** seção 3.
+- **Notebook:** seções 3 (leve) e 4 (alta).
 - **Configuração comum:** frames 20 a 160; treino nas câmeras 0, 1, 3 e 4; câmera 2 reservada para teste.
 - **Leve:** resolução reduzida e menos iterações. Serve de base de comparação.
 - **Alta:** configuração oficial dos autores (resolução cheia, iterações oficiais).
@@ -66,21 +66,21 @@ Todas as etapas leem e gravam em `MyDrive/TCC2_FluidNexus/`:
 
 ### Etapa 4. Avaliação da reconstrução
 
-- **Notebook:** seção 4.
+- **Notebook:** seção 5.
 - **Ações:** comparar cada versão com a foto real da câmera de teste usando PSNR, SSIM e LPIPS em três regiões (imagem inteira, só fumaça, só fundo). Gerar figuras dos frames 40, 80, 120 e 160 e vídeos da reconstrução.
 - **Saída:** Tabela 1 (`resultados/comparacao_leve_x_alta/`), figuras e vídeos.
 - **Concluído quando:** a Tabela 1 tem os três fluidos nas duas versões.
 
 ### Etapa 5. Dados do ScalarFlow
 
-- **Notebook:** seção 5.
+- **Notebook:** seção 6.
 - **Ações:** baixar 10 sequências (`sim_000000` a `sim_000009`) por rsync, extrair densidade e velocidade e salvar compactado. Cada `.tar` tem cerca de 4,7 GB e é apagado depois da extração.
 - **Saída:** `dados/scalarflow/sim_XXXXXX/densidade.npz` (151 frames, 100 x 178 x 100) e `velocidade_meia_res.npz` (150 frames, 50 x 89 x 50 x 3).
 - **Concluído quando:** as 10 sequências estão no Drive e listadas em `resumo_sequencias.csv`.
 
 ### Etapa 6. Preparação para a segmentação
 
-- **Notebook:** seção 6, células 1/5.
+- **Notebook:** seção 7, célula 1/5.
 - **Ações:**
   1. Reamostrar todas as densidades para a grade 64 x 112 x 64 e normalizar pelo percentil 99,9.
   2. Voxelizar as nuvens de pontos do FluidNexus (versão alta) com filtro gaussiano (sigma 1) e compressão `log1p`.
@@ -97,14 +97,14 @@ Todas as etapas leem e gravam em `MyDrive/TCC2_FluidNexus/`:
 
 ### Etapa 7. Treino dos modelos
 
-- **Notebook:** seção 6, células 2/5 e 3/5.
+- **Notebook:** seção 7, células 2/5 e 3/5.
 - **Modelos:** 3D U-Net e V-Net (MONAI), PointNet++ e Point Transformer (PyTorch).
 - **Treino:** perda BCE + Dice, validação a cada época, limite de 20 min por modelo. As redes de pontos usam amostras de pontos dos voxels candidatos.
 - **Saída:** `segmentacao/modelos/<modelo>.pt` e `.json` (parâmetros, tempo e memória).
 
 ### Etapa 8. Avaliação sem ground truth
 
-- **Notebook:** seção 6, célula 4/5.
+- **Notebook:** seção 7, célula 4/5.
 - **Métricas por sequência:**
 
 | Métrica | O que mede | Melhor |
