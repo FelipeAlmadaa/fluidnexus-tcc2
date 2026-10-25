@@ -43,17 +43,31 @@ Os dados e modelos treinados ficam no Google Drive e não são versionados.
 
 Cada animação mostra a foto real da câmera de teste, a reconstrução renderizada e a nuvem de partículas 3D girando ao longo dos frames 20 a 160.
 
-**FluidNexus-Smoke (versão alta)**
+#### ScalarReal
 
-![Smoke](results/gifs/smoke_reconstrucao_3d_alta.gif)
+**Leve**
 
-**FluidNexus-Ball (versão alta)**
+![ScalarReal leve](results/gifs/scalarreal_reconstrucao_3d_leve.gif)
 
-![Ball](results/gifs/ball_reconstrucao_3d_alta.gif)
+#### FluidNexus-Smoke
 
-**ScalarReal (versão leve)**
+**Leve**
 
-![ScalarReal](results/gifs/scalarreal_reconstrucao_3d_leve.gif)
+![Smoke leve](results/gifs/smoke_reconstrucao_3d_leve.gif)
+
+**Alta**
+
+![Smoke alta](results/gifs/smoke_reconstrucao_3d_alta.gif)
+
+#### FluidNexus-Ball
+
+**Leve**
+
+![Ball leve](results/gifs/ball_reconstrucao_3d_leve.gif)
+
+**Alta**
+
+![Ball alta](results/gifs/ball_reconstrucao_3d_alta.gif)
 
 ### Reconstrução: leve x alta
 
