@@ -1,0 +1,7 @@
+torch
+monai
+numpy
+scipy
+scikit-image
+pandas
+matplotlib

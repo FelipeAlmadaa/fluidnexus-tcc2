@@ -1,0 +1,21 @@
+﻿modelo,grupo,consistencia_temporal_iou,variacao_volume,deslocamento_centroide,estabilidade_borda_hd95,flicker,consistencia_fisica_iou,frames_vazios_pct,fracao_volume_pct,componentes,retencao_estrutura_fina,dice_vs_pseudo,inferencia_ms_por_frame
+3D U-Net,FluidNexus Ball (esparsa),0.6823,0.0286,0.5611,1.2525,0.1056,,0.0,0.3818,18.9718,0.9109,0.8814,5.713
+3D U-Net,FluidNexus ScalarReal,0.7555,0.0222,0.5114,1.2722,0.0665,,0.0,0.7083,17.8936,0.0544,0.6446,19.5155
+3D U-Net,FluidNexus Smoke,0.5802,0.036,0.7617,1.6003,0.155,,0.0,0.4272,12.6761,0.9284,0.7955,6.4392
+3D U-Net,ScalarFlow (teste),0.7493,0.0284,0.375,1.0155,0.0322,0.7704,0.0,0.3845,7.5563,0.753,0.8793,12.4135
+Limiar (pseudo-rótulo),FluidNexus Ball (esparsa),0.6788,0.0294,0.6441,1.3607,0.1062,,0.0,0.341,6.7887,1.0,1.0,0.0
+Limiar (pseudo-rótulo),FluidNexus ScalarReal,0.7928,0.0208,0.3756,1.1207,0.0482,,0.0,1.4805,3.078,1.0,1.0,0.0
+Limiar (pseudo-rótulo),FluidNexus Smoke,0.5669,0.0357,0.844,2.0258,0.1646,,0.0,0.3188,5.5915,1.0,1.0,0.0
+Limiar (pseudo-rótulo),ScalarFlow (teste),0.7324,0.0282,0.3542,1.0211,0.0414,0.7665,0.0,0.4323,1.6722,1.0,1.0,0.0
+Point Transformer,FluidNexus Ball (esparsa),0.6692,0.0225,0.5532,1.2247,0.1185,,0.0,0.2252,11.5211,0.491,0.7938,515.1851
+Point Transformer,FluidNexus ScalarReal,0.8102,0.0201,0.3504,1.0772,0.0425,,0.0,1.5058,10.4823,0.8045,0.9494,1223.5008
+Point Transformer,FluidNexus Smoke,0.503,0.0773,1.6002,2.9222,0.2106,,0.0,0.0849,11.6761,0.0837,0.4204,564.3728
+Point Transformer,ScalarFlow (teste),0.7333,0.0263,0.3073,1.0124,0.0417,0.7664,0.0,0.3854,15.5629,0.8287,0.9366,710.101
+PointNet++,FluidNexus Ball (esparsa),0.6612,0.0221,0.5399,1.2247,0.1245,,0.0,0.2123,12.0282,0.4543,0.7655,498.6297
+PointNet++,FluidNexus ScalarReal,0.8008,0.0196,0.3506,1.1044,0.0458,,0.0,1.4185,11.1418,0.708,0.946,1184.202
+PointNet++,FluidNexus Smoke,0.5008,0.0754,1.6241,2.7455,0.2141,,0.0,0.0835,12.5211,0.091,0.415,541.1062
+PointNet++,ScalarFlow (teste),0.7304,0.026,0.3113,1.0124,0.0429,0.7639,0.0,0.3778,17.543,0.8028,0.9254,693.5049
+V-Net,FluidNexus Ball (esparsa),0.6827,0.0218,0.6003,1.2466,0.1031,,0.0,0.2926,14.3099,0.7403,0.8877,56.9865
+V-Net,FluidNexus ScalarReal,0.7675,0.0196,0.3685,1.1006,0.0527,,0.0,1.1908,6.6738,0.5461,0.885,56.3966
+V-Net,FluidNexus Smoke,0.5503,0.0796,1.7505,2.6186,0.1674,,0.0,0.104,7.7042,0.1015,0.4908,57.3451
+V-Net,ScalarFlow (teste),0.7765,0.0257,0.3185,1.0154,0.0237,0.7991,0.0,0.3562,3.894,0.6617,0.8528,61.5875

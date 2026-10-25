@@ -1,0 +1,6 @@
+﻿modelo,parametros,tempo_treino_min,memoria_gpu_gb,inferencia_ms_por_frame
+3D U-Net,1185818,8.9,0.27,11.3
+Limiar (pseudo-rótulo),0,0,0,0
+Point Transformer,218113,20.1,1.65,744.7
+PointNet++,135841,20.0,0.62,722.2
+V-Net,45593892,20.1,2.42,58.8

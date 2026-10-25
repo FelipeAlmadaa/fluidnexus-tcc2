@@ -42,3 +42,10 @@ results/tmp/
 logs/
 runs/
 
+# Notebooks e arquivos gerados
+.ipynb_checkpoints/
+*.npz
+*.npy
+*.tar
+*.mp4
+*.gif
