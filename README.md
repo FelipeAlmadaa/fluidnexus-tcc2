@@ -79,6 +79,31 @@ Cada animação mostra a foto real da câmera de teste, a reconstrução renderi
 
 A versão alta melhora o Smoke em todas as métricas (+1,36 dB de PSNR, +0,05 de SSIM). No ScalarReal o ganho é pequeno. No Ball a fumaça melhora, mas o fundo piora. Valores em [`tabela1_leve_x_alta.csv`](results/tabelas/tabela1_leve_x_alta.csv).
 
+### Precisão da reconstrução ao longo do tempo
+
+PSNR, SSIM e LPIPS medidos frame a frame (20 a 160) na região da fumaça, na câmera de teste, para os 6 casos. Leve em linha tracejada, alta em linha contínua.
+
+![Precisão ao longo do tempo](results/figuras/precisao_ao_longo_do_tempo_6_casos.png)
+
+![Os 6 casos sobrepostos](results/figuras/precisao_ao_longo_do_tempo_sobreposto.png)
+
+| Fluido | Versão | PSNR início (dB) | PSNR fim (dB) | SSIM início | SSIM fim |
+|---|---|---|---|---|---|
+| ScalarReal | leve | 18,74 | 20,46 | 0,611 | 0,627 |
+| ScalarReal | alta | 19,11 | 20,52 | 0,626 | 0,650 |
+| Smoke | leve | 16,77 | 20,12 | 0,533 | 0,623 |
+| Smoke | alta | 17,69 | 21,57 | 0,579 | 0,674 |
+| Ball | leve | 18,76 | 17,82 | 0,623 | 0,569 |
+| Ball | alta | 19,43 | 18,69 | 0,637 | 0,593 |
+
+Início = média dos frames 20 a 60; fim = média dos frames 120 a 160.
+
+- **Smoke** e **ScalarReal**: a precisão aumenta com o tempo, à medida que a pluma se forma. No Smoke, a versão alta fica acima da leve quase o tempo todo.
+- **Ball**: a precisão cai entre os frames 70 e 100, quando a bola atravessa a fumaça, e recupera em parte depois. É o caso mais difícil.
+- Nos primeiros frames do Smoke e do Ball há pouca fumaça na imagem, então o LPIPS baixo nesse trecho tem menos peso.
+
+Dados frame a frame em [`tabela1_leve_x_alta_por_frame.csv`](results/tabelas/tabela1_leve_x_alta_por_frame.csv).
+
 ### Segmentação 3D
 
 ![Tabela 2](results/figuras/tabela2_metricas_sem_gt.png)
